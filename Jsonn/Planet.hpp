@@ -13,7 +13,16 @@ public:
 	std::string name;
 	double weight, radius;
 	std::vector <std::string> satelites;
-	Planet(const std::string& name="Uknown", const double& weight=0.0, const double& radius= 0.0, std::vector <std::string> satelites = {}) : name(name), weight(weight), radius(radius), satelites(satelites) {}
+	
+	Planet(const std::string& name="Uknown", const double& weight=0.0, const double& radius= 0.0, std::vector <std::string> satelites = {}) :
+		name(name), weight(weight), radius(radius), satelites(satelites) {}
+	
+	Planet(const json& planetNode) {
+		name = planetNode["name"];
+		weight = planetNode["weight"];
+		radius = planetNode["radius"];
+		satelites = planetNode["satelites"];
+	}
 	
 	json getJson(){	
 		json node;
@@ -28,6 +37,11 @@ public:
 		std::cout <<
 			"Name: " << name << std::endl <<
 			"Weight: " << weight << std::endl <<
-			"radius: " << radius << std::endl;
+			"radius: " << radius << std::endl <<
+			"Satelites: ";
+		/*for (auto i = satelites.begin(); i != satelites.end(); i++) {
+			std::cout << *i << ", ";
+		}
+		std::cout << *satelites.end() << std::endl;*/
 	}
 };
