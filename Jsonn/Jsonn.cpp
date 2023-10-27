@@ -95,7 +95,7 @@ Planet makePlanet() {
 	std::string name;
 	double radius, weight;
 	std::vector <std::string> satelites;
-	int satelitesCount = 0;
+	int satelitesCount;
 
 	std::cout << "Enter the name of the planet: "; std::cin >> name;
 	std::cout << "Enter the radius of the planet: "; std::cin >> radius;
