@@ -39,9 +39,9 @@ public:
 			"Weight: " << weight << std::endl <<
 			"radius: " << radius << std::endl <<
 			"Satelites: ";
-		/*for (auto i = satelites.begin(); i != satelites.end(); i++) {
-			std::cout << *i << ", ";
+		for (size_t i = 0; i < satelites.size() - 1; i++) {
+			std::cout << satelites[i] << ", ";
 		}
-		std::cout << *satelites.end() << std::endl;*/
+		std::cout << satelites[satelites.size() - 1] << std::endl;
 	}
 };

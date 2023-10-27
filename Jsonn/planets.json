@@ -6,5 +6,15 @@
             "satelite"
         ],
         "weight": 333.0
+    },
+    {
+        "name": "fdsfs",
+        "radius": 2.0,
+        "satelites": [
+            "pl",
+            "an",
+            "et"
+        ],
+        "weight": 1.0
     }
 ]
