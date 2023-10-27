@@ -37,6 +37,10 @@ int main()
 			planets.push_back(makePlanet());
 		}
 		else if (choice == planetsCount + 2) {
+			if (!planetsCount) {
+				std::cout << "You can't delete a nothing" << std::endl;
+				continue;
+			}
 			int planetToEraseIndex;
 			std::cout << "Which planet do you want to delete? "; std::cin >> planetToEraseIndex;
 			planets.erase(planets.begin() + planetToEraseIndex - 1);
@@ -120,7 +124,7 @@ void printActions(const int& planetsCount) {
 	else if (planetsCount > 1) {
 		std::cout << 1 << '-' << planetsCount << ". Print the details of the planets" << std::endl;
 	}
-	std::cout << planetsCount + 1 << ". Add a planet" << std::endl;
 	std::cout << planetsCount + 2 << ". Remove a planet" << std::endl;
+	std::cout << planetsCount + 1 << ". Add a planet" << std::endl;
 	std::cout << planetsCount + 3 << ". Save the planets to a json file" << std::endl;
 }
