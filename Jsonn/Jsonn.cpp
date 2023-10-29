@@ -50,8 +50,8 @@ int main()
 		}
 		else if (choice < planetsCount + 1) {
 			planets[choice - 1].print_planet();
-			system("pause");
 		}
+		system("pause");
 	}
 
 	writePlanetsToJson(filename, planets);
@@ -124,7 +124,7 @@ void printActions(const int& planetsCount) {
 	else if (planetsCount > 1) {
 		std::cout << 1 << '-' << planetsCount << ". Print the details of the planets" << std::endl;
 	}
-	std::cout << planetsCount + 2 << ". Remove a planet" << std::endl;
 	std::cout << planetsCount + 1 << ". Add a planet" << std::endl;
+	std::cout << planetsCount + 2 << ". Remove a planet" << std::endl;
 	std::cout << planetsCount + 3 << ". Save the planets to a json file" << std::endl;
 }
